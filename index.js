@@ -8,9 +8,12 @@ const app = express();
 //I've declared the port where I locally will run the server
 const PORT = process.env.PORT || 1313;
 
-//bodyParser convert 
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+//Built in express middleware
+app.use(express.json())
+
+//bodyParser convert MIddleware
+//app.use(bodyParser.urlencoded({extended: false}));
+//app.use(bodyParser.json());
 
 //fake dataBase just to practice
 let dataBase = {
